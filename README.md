@@ -10,11 +10,21 @@ In this app the user is a customer who is prompted to place an order, if desired
 ## Setup
 
 1. Start MySQL server and run schema.sql to populate the database.
+![mysql database](https://user-images.githubusercontent.com/28015894/36409222-dd510ec6-15cf-11e8-94a1-8f285a503ab7.png)
 2. npm install
 3. node bamazonCustomer.js
 
 ## Example
 
-![mysql database](https://user-images.githubusercontent.com/28015894/36409222-dd510ec6-15cf-11e8-94a1-8f285a503ab7.png)
+### First Prompt
+![first prompt](https://user-images.githubusercontent.com/28015894/36409382-e156f5de-15d0-11e8-94d9-80a0c41b2f08.png)
+
+![second prompt](https://user-images.githubusercontent.com/28015894/36409552-cb735c20-15d1-11e8-9d85-b58ff965bb86.png)
+
+![insufficient quantity](https://user-images.githubusercontent.com/28015894/36409563-d9cd9fe2-15d1-11e8-91ea-9411d2fe07a9.png)
+
+![successful order](https://user-images.githubusercontent.com/28015894/36409582-e9496604-15d1-11e8-973c-1a629fa3c82b.png)
+
+![updated database](https://user-images.githubusercontent.com/28015894/36409591-f400e73e-15d1-11e8-9a45-eb5e90de7892.png)
 
 
