@@ -14,7 +14,7 @@ In this app the user is a customer who is prompted to place an order, if desired
 2. npm install
 3. node bamazonCustomer.js
 
-## Example
+## Examples
 
 ### Initial Message
 ![first prompt](https://user-images.githubusercontent.com/28015894/36409382-e156f5de-15d0-11e8-94d9-80a0c41b2f08.png)
@@ -28,7 +28,7 @@ In this app the user is a customer who is prompted to place an order, if desired
 ### Successful Order
 ![successful order](https://user-images.githubusercontent.com/28015894/36409582-e9496604-15d1-11e8-973c-1a629fa3c82b.png)
 
-### Updated Database
+### Updated Database -- Stock Quanitiy of Item 92 has decreased because of sucessful order.
 ![updated database](https://user-images.githubusercontent.com/28015894/36409591-f400e73e-15d1-11e8-9a45-eb5e90de7892.png)
 
 
