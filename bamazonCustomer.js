@@ -74,7 +74,35 @@ function customerOrder() {
       message: "How many would you like to order?"
     }
 ]).then(function(answer) {
-  var order = {}
+    connection.query("SELECT * FROM products WHERE item_id=?", answer.itemID, function(err, res) {
+      for (var i =0; i < res.length; i ++) {
+        if (answer.orderQuantity > res[i].stock_quantity) {
+          console.log("Sorry, there are only " + res[i].stock_quantity + " items left. Please submit a new order.\n");
+          start();
+        }
+        else {
+          var updatedQuantity = res[i].stock_quantity - answer.orderQuantity;
+          var id = answer.itemID;
+          connection.query("UPDATE products SET ? WHERE ?", [
+            {
+              stock_quantity: updatedQuantity
+            },
+            {
+              item_id: id
+            }
+          ], function(err, res) {});
+          
+          console.log("Success! Your order will be processed. You have ordered \n");
+          console.log("Quantity: " + answer.orderQuantity + "\n" + "Item: " + res[i].product_name + "\n");
+          console.log("Your total price for this order is $" + answer.orderQuantity * res[i].price + "\n");
+          console.log("Thank you for your order!");
+          console.log("If interested, you may place additional orders below.\n");
+          start();
+        }
+      }
+    });
   });
 }
+
+
 
